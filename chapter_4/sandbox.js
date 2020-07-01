@@ -1,32 +1,16 @@
-// practise arrow functions
+const name = 'shaun';
 
-// const greet = function(){
-//     return 'hello, world';
-// };
+// functions
 
-// const greet = () => 'hello, world';
+const greet = () => 'hello';
 
-// const result = greet();
-// console.log(result)
+let resultOne = greet();
+console.log(resultOne);
 
-// const bill = function (products, tax) {
-//     let total = 0;
-//     for(let i=0; i< products.length; i++){
-//         total += products[i] + products [i] * tax;
-//     }
-//     return total;
-// }
+// methods
 
-const bill = (products, tax) => {
-    let total = 0;
-    for(let i=0; i< products.length; i++){
-        total += products[i] + products [i] * tax;
-    }
-    return total;
-}
-
-console.log(bill([10,15,30], 0.2))
-
+let resultTwo = name.toUpperCase();
+console.log(resultTwo)
 
 
 
