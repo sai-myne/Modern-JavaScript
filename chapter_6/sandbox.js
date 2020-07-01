@@ -1,12 +1,18 @@
-const title = document.querySelector('h1');
+// const content = document.querySelector('p');
 
-// title.setAttribute('style', 'margin: 50px;');
+// console.log(content.classList);
+// content.classList.add('error');
+// content.classList.remove('error');
+// content.classList.add('success');
 
-console.log(title.style);
-console.log(title.style.color);
+const paras = document.querySelectorAll('p');
 
-title.style.margin = '50px';
-title.style.color = 'crimson';
+paras.forEach(p => {
+    if(p.textContent.includes('error')) p.classList.add('error');
+    if(p.textContent.includes('success')) p.classList.add('success');    
+});
 
-title.style.fontSize = '60px';
-title.style.margin = '';
+const title = document.querySelector('.title');
+
+title.classList.toggle('test');
+title.classList.toggle('test');
