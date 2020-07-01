@@ -5,17 +5,21 @@ let user = {
     age: 30,
     email: 'crystal@thenetninja.co.uk',
     location: 'berlin',
-    blogs: ['why mac & cheese rules', '10 things to make with marmite']
+    blogs: ['why mac & cheese rules', '10 things to make with marmite'],
+    login: function(){
+        console.log('the user logged in');
+    },
+    logout: function(){
+        console.log('the user logged out');
+    },
+    logBlogs: function(){
+        
+    }
 };
 
-console.log(user);
-console.log(user.name);
+user.login();
+user.logout();
 
-// user.age = 35;
-console.log(user.age);
+const name = 'mario';
 
-console.log(user['location']);
-user['name'] = 'chun-li';
-console.log(user['name'])
-
-console.log(typeof user);
+console.log(name.toUpperCase())
