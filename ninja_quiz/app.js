@@ -15,6 +15,19 @@ form.addEventListener('submit', e => {
         }
     });
     // show result on page
+    scrollTo(0,0);
     result.querySelector('span').textContent = `${score}%`;
     result.classList.remove('d-none');
 });
+
+// console.log('hello');
+
+// console.log(document.querySelector('form'));
+// console.log(window.document.querySelector('form'));
+
+// alert('hello');
+// window.alert('hellow');
+
+// setTimeout(() => {
+//     alert('hello')
+// }, 3000)
