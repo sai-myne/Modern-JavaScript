@@ -1,21 +1,21 @@
-// timestamp
+const clock = document.querySelector('.clock');
 
-const before = new Date('Feburary 1 2019 7:30:59');
-const now = new Date();
+const tick = () => {
 
-// console.log(now.getTime(), before.getTime());
+  const now = new Date();
 
-const diff = now.getTime() - before.getTime();
-console.log(diff);
+  const h = now.getHours();
+  const m = now.getMinutes();
+  const s = now.getSeconds();
 
-const mins = Math.round(diff / 1000 / 60);
-const hours = Math.round(mins / 60);
-const days = Math.round(hours / 24);
+  const html = `
+    <span>${h}</span> :
+    <span>${m}</span> :
+    <span>${s}</span>
+  `;
 
-console.log(mins, hours, days);
+  clock.innerHTML = html;
 
-console.log(`the blog was witten ${days} ago`);
+};
 
-// converting timestamps into date objects
-const timestamp = 44692226301;
-console.log(new Date(timestamp));
+setInterval(tick, 1000);
