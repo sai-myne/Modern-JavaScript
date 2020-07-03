@@ -36,11 +36,7 @@ const updateUI = (data) => {
     if(card.classList.contains('d-none')){
         card.classList.remove('d-none');
     }
-
-
 }
-
-
 
 cityForm.addEventListener('submit', e => {
     // prevent default action
