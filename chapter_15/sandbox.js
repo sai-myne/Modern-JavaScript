@@ -21,6 +21,10 @@ class User {
 }
 
 class Admin extends User{
+    constructor(username, email, title){
+        super(username, email);
+        this.title = title;
+    }
     deleteUser(user){
         users = users.filter((u) => u.username !== user.username)
     }
@@ -28,9 +32,9 @@ class Admin extends User{
 
 const userOne = new User('mario', 'mario@thenetninja.co.uk');
 const userTwo = new User('luigi', 'luigi@thenetninja.co.uk');
-const userThree = new Admin('shaun', 'shaun@thenetninja.co.uk');
+const userThree = new Admin('shaun', 'shaun@thenetninja.co.uk', 'black-belt-ninja');
 
-console.log(userOne, userTwo, userThree);
+console.log(userThree);
 
 userOne.login().incScore().incScore().logout();
 
@@ -40,5 +44,4 @@ console.log(users);
 userThree.deleteUser(userTwo);
 console.log(users);
 
-userOne.deleteUser(userThree);
 
