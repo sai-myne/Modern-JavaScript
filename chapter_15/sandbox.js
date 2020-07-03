@@ -1,28 +1,18 @@
-const userOne = {
-    username: 'ryu',
-    email: 'ryu@thenetninja.co.uk',
-    login(){
-        console.log('the user logged in');
-    },
-    logout(){
-        console.log('the uer logged out');
+
+class User {
+    constructor(username, email){
+        // set up properties
+        this.username = username;
+        this.email = email;
     }
 }
 
-console.log(userOne.email, userOne.username);
-userOne.login();
+const userOne = new User('mario', 'mario@thenetninja.co.uk');
+const userTwo = new User('luigi', 'luigi@thenetninja.co.uk');
 
-const userTwo = {
-    username: 'chun li',
-    email: 'chunli@thenetninja.co.uk',
-    login(){
-        console.log('the user logged in');
-    },
-    logout(){
-        console.log('the uer logged out');
-    }
-}
+console.log(userOne, userTwo);
 
-console.log(userTwo.email, userTwo.username);
-userTwo.login();
-
+// the 'new' keyword
+// 1 - it creates a new empty object {}
+// 2 = it binds the value of 'this' to the new empty object
+// 3 - it calls the constructor function to 'build' the object
