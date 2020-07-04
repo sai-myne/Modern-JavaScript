@@ -4,4 +4,4 @@ import users, {getPremUsers} from './data';
 const premUser = getPremUsers(users);
 console.log(users, premUser);
 
-console.log('test');
+console.log('test 3');
